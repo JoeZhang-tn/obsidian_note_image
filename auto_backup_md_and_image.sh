@@ -6,7 +6,7 @@ NOTE_FOLDER='/home/joezhang/workspace/obsidian_note/Web_Clipper'
 while true
 do
 	cd ${CURR}
-	echo "check if there is a web_clipper file?"
+	echo -ne "check if there is a web_clipper file? $(date) \r"
 	if [ -d "${CURR}/default" ];then
 		echo "#### detect web_clipper file, wait for it download the image."
 		sleep 5
