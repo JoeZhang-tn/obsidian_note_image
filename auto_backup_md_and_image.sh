@@ -34,6 +34,9 @@ do
 			git push origin
 			cd ${CURR}
 
+			#remove server local file
+			sed -r -i 's|\[\!\[(.*)\]\((.*)\)\]\((.*)\)|\!\[\1\]\(\2\)|g' ${FILE}
+
 			#change image link from assets to github
 			sed -r -i \
 			's|assets/(.*)\)|https://github.com/JoeZhang-tn/obsidian_note_image/blob/main/\1\?raw\=true\)|g' \
